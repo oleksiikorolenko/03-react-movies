@@ -12,15 +12,15 @@ interface SearchFormProps{
 
 export default function SearchBar({ onSubmit }: SearchFormProps ) {
     
-    const handleSubmit = (formData: FormData) => {
-        const query = formData.get("query") as string;
+  const handleSubmit = (formData: FormData) => {
+    const query = formData.get("query") as string;
 
-        if (query === "") {
-            notify();
-            return;
-        }
-        onSubmit(query);
+    if (query === "") {
+      notify();
+      return;
     }
+    onSubmit(query);
+  };
     return (
         <header className={css.header}>
   <div className={css.container}>
@@ -48,4 +48,4 @@ export default function SearchBar({ onSubmit }: SearchFormProps ) {
   </div>
 </header>
     )
-}
+};
