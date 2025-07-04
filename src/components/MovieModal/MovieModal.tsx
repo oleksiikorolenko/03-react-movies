@@ -9,9 +9,6 @@ interface MovieModalProps {
 }
 
 
-// const modalRoot = document.getElementById('modal-root') as HTMLElement;
-
-
 
 export default function MovieModal({ movie, onClose }: MovieModalProps) {
     const handleBackdropClick = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -28,10 +25,11 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
                 onClose();
             }
         };
-      
+        document.body.style.overflow = 'hidden';
         document.addEventListener("keydown", handleEsc);
       
         return () => {
+            document.body.style.overflow = '';
             document.removeEventListener("keydown", handleEsc);
         };
     }, [onClose]);

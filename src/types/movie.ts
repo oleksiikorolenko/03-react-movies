@@ -8,7 +8,3 @@ export interface Movie {
     vote_average: number;
 };
 
-// export interface MoviesHTTPResponse{
-
-//     results: Movie[];
-// };
