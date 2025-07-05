@@ -19,11 +19,7 @@ export default function App() {
     const [selectedMovie, setSelectedMovie] = useState<Movie | null>(null);
 
     const handleSearch = async (query: string) => {
-        // if (!topic.trim()) {
-        //     toast('Please enter your search query.');
-        //     return;
-        // }
-        setMovies([]);
+       setMovies([]);
         setLoading(true);
         setError(false);
 
